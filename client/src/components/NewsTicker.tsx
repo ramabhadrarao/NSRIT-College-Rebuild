@@ -1,8 +1,6 @@
-import { useState, useEffect } from "react";
-import { Bell, X } from "lucide-react";
+import { Bell } from "lucide-react";
 
 export default function NewsTicker() {
-  const [isVisible, setIsVisible] = useState(true);
   const news = [
     "Admissions open for B.Tech 2026-27 batch. Apply online now.",
     "NSRIT achieves 95% placement record for academic year 2025-26.",
@@ -10,35 +8,23 @@ export default function NewsTicker() {
     "Upcoming: International Conference on AI & ML – March 15th, 2026."
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % news.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
-
-  if (!isVisible) return null;
+  const message = news.join("   •   ");
 
   return (
-    <div className="bg-transparent text-xs sm:text-sm font-medium">
-      <div className="container mx-auto px-4 py-2">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 rounded-full bg-muted text-slate-700 px-4 py-1.5 border border-border/70 shadow-sm">
-          <div className="flex items-center gap-3 overflow-hidden">
-            <span className="flex items-center gap-1 bg-secondary/10 text-secondary px-2 py-0.5 rounded-full text-[10px] sm:text-xs uppercase tracking-wider font-semibold shrink-0">
+    <div className="bg-transparent text-[11px] sm:text-sm font-medium">
+      <div className="container mx-auto px-3 sm:px-4 py-1">
+        <div className="h-8 sm:h-9 flex items-center rounded-full bg-muted text-slate-700 px-3 sm:px-4 border border-border/70 shadow-sm overflow-hidden">
+          <div className="flex items-center gap-2 sm:gap-3 w-full">
+            <span className="flex items-center gap-1 bg-secondary/10 text-secondary px-2 py-[1px] rounded-full text-[10px] sm:text-xs uppercase tracking-wider font-semibold shrink-0">
               <Bell className="h-3 w-3" /> Updates
             </span>
-            <div className="relative min-h-[1.25rem] w-full max-w-2xl flex items-center">
-              {news[currentIndex]}
+            <div className="flex-1 overflow-hidden">
+              <div className="ticker-move">
+                <span className="pr-8">{message}</span>
+                <span className="pr-8">{message}</span>
+              </div>
             </div>
           </div>
-          <button 
-            onClick={() => setIsVisible(false)}
-            className="text-slate-400 hover:text-slate-700 transition-colors sm:ml-4 self-end sm:self-auto shrink-0"
-          >
-            <X className="h-4 w-4" />
-          </button>
         </div>
       </div>
     </div>

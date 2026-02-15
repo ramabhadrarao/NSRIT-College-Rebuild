@@ -8,7 +8,7 @@ import Placements from "@/components/Placements";
 import CampusLife from "@/components/CampusLife";
 import studentLibrary from "@/assets/students-library.png";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { CheckCircle2, ArrowRight, MessageCircle } from "lucide-react";
 
 export default function Home() {
   return (
@@ -16,6 +16,16 @@ export default function Home() {
       <Navbar />
       <NewsTicker />
       <Hero />
+
+      <a
+        href="https://wa.me/918912792617"
+        target="_blank"
+        rel="noreferrer"
+        className="fixed z-40 bottom-5 right-4 sm:bottom-8 sm:right-8 flex items-center gap-2 rounded-full bg-emerald-500 text-white px-4 py-2 shadow-lg hover:bg-emerald-600 transition-colors"
+      >
+        <MessageCircle className="h-5 w-5" />
+        <span className="hidden sm:inline text-sm font-semibold">WhatsApp</span>
+      </a>
       
       {/* About Section - Redesigned for better flow */}
       <section className="py-24 bg-white relative overflow-hidden">

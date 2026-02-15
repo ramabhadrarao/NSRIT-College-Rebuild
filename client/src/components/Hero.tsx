@@ -49,7 +49,7 @@ export default function Hero() {
         <img
           src={heroImage}
           alt="NSRIT Campus"
-          className="w-full h-full object-cover opacity-80"
+          className="w-full h-full min-w-full object-cover opacity-80"
         />
         <div className="absolute inset-0 bg-linear-to-br from-slate-950/80 via-slate-900/60 to-slate-900/20" />
         <div className="absolute -right-32 -top-32 h-80 w-80 rounded-full bg-gradient-to-br from-primary/30 via-secondary/20 to-rose-400/30 blur-3xl opacity-70" />

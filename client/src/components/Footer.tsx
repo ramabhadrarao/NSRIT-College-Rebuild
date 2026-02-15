@@ -1,4 +1,4 @@
-import logo from "@/assets/logo.png";
+import logo from "@assets/nsrit-logo.svg";
 import { Facebook, Twitter, Instagram, Linkedin, Youtube, ArrowRight, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <img src="/images/logo-official.png" alt="NSRIT" className="h-12 w-auto brightness-0 invert" />
+              <img src={logo} alt="NSRIT" className="h-10 md:h-12 w-auto object-contain" />
             </div>
             <p className="text-sm leading-relaxed mb-6 text-slate-400">
               Nadimpalli Satyanarayana Raju Institute of Technology is committed to providing quality education and fostering innovation in engineering and technology.

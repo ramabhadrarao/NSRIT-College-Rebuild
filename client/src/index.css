@@ -111,9 +111,30 @@
 }
 
 .clip-hero {
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: none;
+}
+
+@media (min-width: 768px) {
+  .clip-hero {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
 }
 
 .gradient-text {
   @apply bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary;
+}
+
+@keyframes ticker-move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-move {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: ticker-move 24s linear infinite;
 }

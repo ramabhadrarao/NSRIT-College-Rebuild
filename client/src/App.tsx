@@ -9,6 +9,7 @@ import Contact from "@/pages/Contact";
 import Admissions from "@/pages/Admissions";
 import PlacementsPage from "@/pages/Placements";
 import NewsTicker from "@/components/NewsTicker";
+import Department from "@/pages/departments/Department";
 
 function Router() {
   return (
@@ -17,6 +18,7 @@ function Router() {
       <Route path="/contact" component={Contact} />
       <Route path="/admissions" component={Admissions} />
       <Route path="/placements" component={PlacementsPage} />
+      <Route path="/departments/:dept/:section?" component={Department} />
       <Route component={NotFound} />
     </Switch>
   );

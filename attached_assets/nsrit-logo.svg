@@ -1,0 +1,65 @@
+<svg width="840" height="210" viewBox="0 0 840 210" xmlns="http://www.w3.org/2000/svg">
+
+  <text x="62" y="26"
+        font-family="Segoe UI, Arial, Helvetica, sans-serif"
+        font-size="15"
+        fill="#1F3A6D"
+        font-weight="600"
+        letter-spacing="0.5">
+        ESTABLISHED IN 2008
+  </text>
+
+  <rect x="30" y="38" width="235" height="100" fill="#C40000"/>
+
+  <text x="48" y="105"
+        font-family="Segoe UI, Arial, Helvetica, sans-serif"
+        font-size="62"
+        font-weight="800"
+        fill="#FFFFFF"
+        letter-spacing="1.5">
+        NSRIT
+  </text>
+
+  <text x="285" y="70"
+        font-family="Segoe UI, Arial, Helvetica, sans-serif"
+        font-size="24"
+        fill="#D10000"
+        font-weight="500">
+        An Autonomous Institution
+  </text>
+
+  <text x="285" y="105"
+        font-family="Segoe UI, Arial, Helvetica, sans-serif"
+        font-size="30"
+        fill="#178A41"
+        font-weight="700">
+        NAAC-A, NBA
+  </text>
+
+  <text x="285" y="135"
+        font-family="Segoe UI, Arial, Helvetica, sans-serif"
+        font-size="23"
+        fill="#000000"
+        font-weight="600">
+        (CSE, ECE &amp; ME)
+  </text>
+
+  <text x="30" y="172"
+        font-family="Segoe UI, Arial, Helvetica, sans-serif"
+        font-size="24"
+        fill="#1A1A1A"
+        font-weight="700"
+        letter-spacing="0.4">
+        NADIMPALLI SATYANARAYANA RAJU
+  </text>
+
+  <text x="30" y="200"
+        font-family="Segoe UI, Arial, Helvetica, sans-serif"
+        font-size="24"
+        fill="#1A1A1A"
+        font-weight="700"
+        letter-spacing="0.4">
+        INSTITUTE OF TECHNOLOGY
+  </text>
+
+</svg>
