@@ -56,37 +56,37 @@ export default function Hero() {
         <div className="absolute -left-32 bottom-0 h-72 w-72 rounded-full bg-gradient-to-tr from-amber-400/25 via-emerald-400/25 to-primary/30 blur-3xl opacity-60" />
       </div>
 
-      <div className="container mx-auto px-4 z-10 relative py-14 md:py-18 lg:py-24">
-        <div className="grid gap-10 lg:gap-12 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] items-start">
-          <div className="max-w-3xl">
+      <div className="container mx-auto px-4 z-10 relative py-8 md:py-18 lg:py-24">
+        <div className="grid gap-8 md:gap-10 lg:gap-12 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] items-start">
+          <div className="max-w-3xl mx-auto lg:mx-0">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/80 text-accent text-[11px] font-semibold tracking-[0.22em] mb-6 uppercase shadow-lg shadow-slate-900/60 backdrop-blur-md border border-white/10">
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/80 text-accent text-[11px] font-semibold tracking-[0.22em] mb-6 uppercase shadow-lg shadow-slate-900/60 backdrop-blur-md border border-white/10 mx-auto md:mx-0">
                 <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
                 Admissions Open 2026-27
               </span>
-              <h1 className="text-[2.7rem] md:text-[3.5rem] lg:text-[4rem] font-semibold text-white leading-tight mb-4 md:mb-5">
+              <h1 className="text-[2.1rem] md:text-[3.2rem] lg:text-[4rem] font-semibold text-white leading-tight mb-3 md:mb-5 text-center md:text-left">
                 Shaping the{" "}
                 <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">
                   Future of Engineering
                 </span>
               </h1>
-              <p className="text-lg md:text-xl text-slate-200/90 mb-8 max-w-2xl leading-relaxed">
+              <p className="text-[15px] md:text-xl text-slate-200/90 mb-6 md:mb-8 max-w-2xl leading-relaxed text-center md:text-left mx-auto md:mx-0">
                 Experience a future-ready campus with industry-aligned programs,
                 global collaborations, and a strong placement ecosystem designed
                 for tomorrow&apos;s innovators.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 h-12 text-base rounded-full shadow-lg shadow-primary/40">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 items-stretch sm:items-center justify-center md:justify-start">
+                <Button className="bg-primary hover:bg-primary/90 text-white font-semibold px-7 md:px-8 h-11 md:h-12 text-sm md:text-base rounded-full shadow-lg shadow-primary/40">
                   Explore Programs
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-white/5 backdrop-blur-md border-white/25 text-slate-50 hover:bg-white hover:text-slate-900 font-semibold px-8 h-12 text-base rounded-full group"
+                  className="bg-white/5 backdrop-blur-md border-white/25 text-slate-50 hover:bg-white hover:text-slate-900 font-semibold px-7 md:px-8 h-11 md:h-12 text-sm md:text-base rounded-full group"
                 >
                   <PlayCircle className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                   Virtual Campus Tour
@@ -99,39 +99,41 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.25 }}
-              className="mt-12 pt-6 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8"
+              className="hidden md:grid mt-12 pt-6 border-t border-white/10 grid-cols-2 md:grid-cols-4 gap-5 md:gap-8"
             >
               <div className="flex flex-col">
                 <div className="flex items-center gap-2 mb-1 text-secondary">
-                  <GraduationCap className="h-5 w-5" />
-                  <span className="font-bold text-3xl">15+</span>
+                  <GraduationCap className="h-4 w-4 md:h-5 md:w-5" />
+                  <span className="font-bold text-2xl md:text-3xl">15+</span>
                 </div>
-                <span className="text-sm text-slate-300">
+                <span className="text-xs md:text-sm text-slate-300 text-center md:text-left">
                   Years of Excellence
                 </span>
               </div>
               <div className="flex flex-col">
                 <div className="flex items-center gap-2 mb-1 text-secondary">
-                  <Users className="h-5 w-5" />
-                  <span className="font-bold text-3xl">4000+</span>
+                  <Users className="h-4 w-4 md:h-5 md:w-5" />
+                  <span className="font-bold text-2xl md:text-3xl">4000+</span>
                 </div>
-                <span className="text-sm text-slate-300">
+                <span className="text-xs md:text-sm text-slate-300 text-center md:text-left">
                   Students Enrolled
                 </span>
               </div>
               <div className="flex flex-col">
                 <div className="flex items-center gap-2 mb-1 text-secondary">
-                  <Building2 className="h-5 w-5" />
-                  <span className="font-bold text-3xl">50+</span>
+                  <Building2 className="h-4 w-4 md:h-5 md:w-5" />
+                  <span className="font-bold text-2xl md:text-3xl">50+</span>
                 </div>
-                <span className="text-sm text-slate-300">Modern Labs</span>
+                <span className="text-xs md:text-sm text-slate-300 text-center md:text-left">
+                  Modern Labs
+                </span>
               </div>
               <div className="flex flex-col">
                 <div className="flex items-center gap-2 mb-1 text-secondary">
-                  <Trophy className="h-5 w-5" />
-                  <span className="font-bold text-3xl">95%</span>
+                  <Trophy className="h-4 w-4 md:h-5 md:w-5" />
+                  <span className="font-bold text-2xl md:text-3xl">95%</span>
                 </div>
-                <span className="text-sm text-slate-300">
+                <span className="text-xs md:text-sm text-slate-300 text-center md:text-left">
                   Placement Record
                 </span>
               </div>
@@ -142,7 +144,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="relative max-w-md mx-auto w-full lg:max-w-none"
+            className="relative max-w-md mx-auto w-full lg:max-w-none mt-8 md:mt-0"
           >
             <div className="absolute -inset-1 bg-gradient-to-br from-rose-400/35 via-emerald-300/25 to-amber-300/35 opacity-70 blur-xl" />
             <div className="relative rounded-3xl bg-white/95 border border-border shadow-2xl shadow-slate-900/30 overflow-hidden">
