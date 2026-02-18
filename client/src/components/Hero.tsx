@@ -56,7 +56,7 @@ export default function Hero() {
         <div className="absolute -left-32 bottom-0 h-72 w-72 rounded-full bg-gradient-to-tr from-amber-400/25 via-emerald-400/25 to-primary/30 blur-3xl opacity-60" />
       </div>
 
-      <div className="container mx-auto px-4 z-10 relative py-8 md:py-18 lg:py-24">
+      <div className="container mx-auto px-4 sm:px-6 z-10 relative py-8 md:py-16 lg:py-24">
         <div className="grid gap-8 md:gap-10 lg:gap-12 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] items-start">
           <div className="max-w-3xl mx-auto lg:mx-0">
             <motion.div
@@ -89,7 +89,8 @@ export default function Hero() {
                   className="bg-white/5 backdrop-blur-md border-white/25 text-slate-50 hover:bg-white hover:text-slate-900 font-semibold px-7 md:px-8 h-11 md:h-12 text-sm md:text-base rounded-full group"
                 >
                   <PlayCircle className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                  Virtual Campus Tour
+                  <span className="hidden sm:inline">Virtual Campus Tour</span>
+                  <span className="sm:hidden">Campus Tour</span>
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </div>
@@ -99,39 +100,39 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.25 }}
-              className="hidden md:grid mt-12 pt-6 border-t border-white/10 grid-cols-2 md:grid-cols-4 gap-5 md:gap-8"
+              className="grid mt-8 md:mt-12 pt-6 border-t border-white/10 grid-cols-2 md:grid-cols-4 gap-4 md:gap-8"
             >
-              <div className="flex flex-col">
+              <div className="flex flex-col items-center md:items-start">
                 <div className="flex items-center gap-2 mb-1 text-secondary">
-                  <GraduationCap className="h-4 w-4 md:h-5 md:w-5" />
-                  <span className="font-bold text-2xl md:text-3xl">15+</span>
+                  <GraduationCap className="h-5 w-5" />
+                  <span className="font-bold text-3xl">15+</span>
                 </div>
                 <span className="text-xs md:text-sm text-slate-300 text-center md:text-left">
                   Years of Excellence
                 </span>
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col items-center md:items-start">
                 <div className="flex items-center gap-2 mb-1 text-secondary">
-                  <Users className="h-4 w-4 md:h-5 md:w-5" />
-                  <span className="font-bold text-2xl md:text-3xl">4000+</span>
+                  <Users className="h-5 w-5" />
+                  <span className="font-bold text-3xl">4000+</span>
                 </div>
                 <span className="text-xs md:text-sm text-slate-300 text-center md:text-left">
                   Students Enrolled
                 </span>
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col items-center md:items-start">
                 <div className="flex items-center gap-2 mb-1 text-secondary">
-                  <Building2 className="h-4 w-4 md:h-5 md:w-5" />
-                  <span className="font-bold text-2xl md:text-3xl">50+</span>
+                  <Building2 className="h-5 w-5" />
+                  <span className="font-bold text-3xl">50+</span>
                 </div>
                 <span className="text-xs md:text-sm text-slate-300 text-center md:text-left">
                   Modern Labs
                 </span>
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col items-center md:items-start">
                 <div className="flex items-center gap-2 mb-1 text-secondary">
-                  <Trophy className="h-4 w-4 md:h-5 md:w-5" />
-                  <span className="font-bold text-2xl md:text-3xl">95%</span>
+                  <Trophy className="h-5 w-5" />
+                  <span className="font-bold text-3xl">95%</span>
                 </div>
                 <span className="text-xs md:text-sm text-slate-300 text-center md:text-left">
                   Placement Record
@@ -147,17 +148,17 @@ export default function Hero() {
             className="relative max-w-md mx-auto w-full lg:max-w-none mt-8 md:mt-0"
           >
             <div className="absolute -inset-1 bg-gradient-to-br from-rose-400/35 via-emerald-300/25 to-amber-300/35 opacity-70 blur-xl" />
-            <div className="relative rounded-3xl bg-white/95 border border-border shadow-2xl shadow-slate-900/30 overflow-hidden">
-              <div className="px-6 pt-5 pb-4 flex items-center justify-between">
-                <div>
+            <div className="relative rounded-3xl bg-white/95 border border-border shadow-2xl shadow-slate-900/30 overflow-hidden w-full">
+              <div className="px-4 sm:px-6 pt-5 pb-4 flex items-center justify-between gap-2">
+                <div className="min-w-0 flex-1">
                   <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
                     Admissions & Media
                   </p>
-                  <p className="text-sm text-slate-600">
+                  <p className="text-sm text-slate-600 truncate">
                     Enquiry form, gallery, and video tour
                   </p>
                 </div>
-                <div className="flex items-center gap-2 text-[10px] text-slate-500">
+                <div className="hidden sm:flex items-center gap-2 text-[10px] text-slate-500 flex-shrink-0">
                   <span className="inline-flex h-6 items-center rounded-full bg-muted px-2">
                     Hero Slides
                   </span>
@@ -175,10 +176,10 @@ export default function Hero() {
               >
                 <CarouselContent className="pb-4">
                   <CarouselItem>
-                    <div className="px-6 pb-6">
-                      <div className="rounded-2xl bg-muted border border-border p-5 space-y-4">
-                        <div className="flex items-center justify-between gap-4">
-                          <div>
+                    <div className="px-4 sm:px-6 pb-6">
+                      <div className="rounded-2xl bg-muted border border-border p-4 sm:p-5 space-y-4">
+                        <div className="flex items-center justify-between gap-2 flex-wrap">
+                          <div className="min-w-0">
                             <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
                               Quick Enquiry
                             </p>
@@ -186,12 +187,12 @@ export default function Hero() {
                               Share your details to get a call back.
                             </p>
                           </div>
-                          <span className="inline-flex h-7 items-center rounded-full bg-emerald-500 px-3 text-[10px] font-semibold text-white">
+                          <span className="inline-flex h-7 items-center rounded-full bg-emerald-500 px-3 text-[10px] font-semibold text-white flex-shrink-0">
                             Admissions 2026
                           </span>
                         </div>
                         <form className="space-y-3">
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                          <div className="grid grid-cols-1 gap-3">
                             <div className="space-y-1">
                               <Label
                                 htmlFor="hero-name"
@@ -220,7 +221,7 @@ export default function Hero() {
                               />
                             </div>
                           </div>
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                          <div className="grid grid-cols-1 gap-3">
                             <div className="space-y-1">
                               <Label
                                 htmlFor="hero-phone"
@@ -273,10 +274,10 @@ export default function Hero() {
                   </CarouselItem>
 
                   <CarouselItem>
-                    <div className="px-6 pb-6">
-                      <div className="rounded-2xl bg-white border border-border p-5 space-y-4">
-                        <div className="flex items-center justify-between gap-4">
-                          <div>
+                    <div className="px-4 sm:px-6 pb-6">
+                      <div className="rounded-2xl bg-white border border-border p-4 sm:p-5 space-y-4">
+                        <div className="flex items-center justify-between gap-2 flex-wrap">
+                          <div className="min-w-0">
                             <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
                               Campus Gallery
                             </p>
@@ -284,16 +285,16 @@ export default function Hero() {
                               Swipe through life at NSRIT.
                             </p>
                           </div>
-                          <span className="inline-flex h-7 items-center rounded-full bg-muted px-3 text-[10px] font-semibold text-slate-800">
+                          <span className="inline-flex h-7 items-center rounded-full bg-muted px-3 text-[10px] font-semibold text-slate-800 flex-shrink-0">
                             Photos
                           </span>
                         </div>
-                        <div className="relative">
-                          <div className="flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory">
+                        <div className="relative -mx-4 sm:mx-0">
+                          <div className="flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory scrollbar-hide px-4 sm:px-0">
                             {galleryImages.map((img, index) => (
                               <div
                                 key={index}
-                                className="relative min-w-[180px] h-40 rounded-xl overflow-hidden snap-start group"
+                                className="relative min-w-[160px] sm:min-w-[180px] h-40 rounded-xl overflow-hidden snap-start group flex-shrink-0"
                               >
                                 <img
                                   src={img}
@@ -314,10 +315,10 @@ export default function Hero() {
                   </CarouselItem>
 
                   <CarouselItem>
-                    <div className="px-6 pb-6">
-                      <div className="rounded-2xl bg-white border border-border p-5 space-y-4">
-                        <div className="flex items-center justify-between gap-4">
-                          <div>
+                    <div className="px-4 sm:px-6 pb-6">
+                      <div className="rounded-2xl bg-white border border-border p-4 sm:p-5 space-y-4">
+                        <div className="flex items-center justify-between gap-2 flex-wrap">
+                          <div className="min-w-0">
                             <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
                               Campus Tour
                             </p>
@@ -325,7 +326,7 @@ export default function Hero() {
                               Watch a YouTube-style walkthrough of NSRIT.
                             </p>
                           </div>
-                          <span className="inline-flex h-7 items-center rounded-full bg-red-500/90 px-3 text-[10px] font-semibold text-white">
+                          <span className="inline-flex h-7 items-center rounded-full bg-red-500/90 px-3 text-[10px] font-semibold text-white flex-shrink-0">
                             Video
                           </span>
                         </div>
